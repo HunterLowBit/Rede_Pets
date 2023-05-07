@@ -1,7 +1,8 @@
 const express = require('express');
+const Handlebars = require('express-handlebars');
 const app = express();
-app.use(express.static(__dirname + '/views'));
-app.use(express.static(__dirname + '/public'));
+
+app.engine('handlebars', Handlebars({defaultlayout}));
 
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/html/index.html');

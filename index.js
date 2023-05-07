@@ -1,12 +1,13 @@
+const express = require('express');
+const app = express();
+app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/public'));
 
-const http = require('http');
-
-const server = http.createServer((req, res) => {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.end('<h1>Hello, World!</h1>');
+app.get('/', function(req, res) {
+  res.sendFile(__dirname + '/public/index.html');
 });
 
-server.listen(3000, () => {
-  console.log('Server started on port 3000\n\nhttp://localhost:3000/');
-}); 
-// http://localhost:3000/
+app.listen(3000, function() {
+  console.log('O servidor está rodando na porta 3000\n\nhttp://localhost:3000/');
+});
+

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "google-auth-library": "^8.8.0",
+    "passport-google-oauth20": "^2.0.0"
+  }
+}

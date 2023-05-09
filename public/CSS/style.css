@@ -1,4 +1,5 @@
-.body{
+
+body{/*Delete essa borda quando acabar, serve de debug no body*/
     border: 1px solid red;
     height: fit-content; 
     width: fit-content;  

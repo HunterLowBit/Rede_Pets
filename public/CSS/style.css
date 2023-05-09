@@ -1,6 +1,3 @@
-
-body{/*Delete essa borda quando acabar, serve de debug no body*/
-    border: 1px solid red;
-    height: fit-content; 
-    width: fit-content;  
-}/*Delete essa borda quando acabar, serve de debug no body*/
+* {/*deletar isso quando acabar*/ 
+    outline: 1px solid red;
+  }/*deletar isso quando acabar*/

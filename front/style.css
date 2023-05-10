@@ -1,0 +1,196 @@
+/* resetando valores padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilizando a fonte e fundo do body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ADD8E6;
+}
+
+img{
+    width: 340px;
+    height: 240px;
+}
+
+
+/* estilizando o header */
+header {
+    background-color: #2A0A0A;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5FB404;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #5FB404;
+}
+
+/* estilizando o hero */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 500px;
+
+}
+
+.hero h2 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #145A32;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2A0A0A;
+}
+
+/* estilizando os recursos */
+.features {
+    background-color: #000000;
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 32px;
+    color: #4B8A08;
+    margin-bottom: 30px;
+}
+
+.features ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.features li {
+    margin-right: 40px;
+    color: #4B8A08;
+}
+
+.features li img {
+    height: 50px;
+    margin-right: 10px;
+    color: #4B8A08;
+}
+
+.features li span {
+    font-size: 24px;
+    color: #555;
+}
+
+/* estilizando o CTA */
+.cta {
+    background-color: #ADD8E6;
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* estilizando o footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  display: flex;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+  max-width: 1000px;
+  height: auto;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}

@@ -1,0 +1,51 @@
+/* estilo padrão para todos os campos de entrada */
+input, select {
+  display: block;
+  width: 50%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+/* estilo para campos de entrada obrigatórios */
+input[required], select[required] {
+  border-color: red;
+}
+
+/* estilo para rótulos */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* estilo para seções do formulário */
+fieldset {
+  margin-bottom: 2rem;
+  border: none;
+}
+
+/* estilo para botão de envio */
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+/* estilo para mensagem de erro */
+input:invalid, select:invalid {
+  border-color: green;
+}
+
+input:invalid + span::before {
+  content: "⚠ ";
+  color: red;
+}
+
+input:invalid + span::after {
+  content: "Campo obrigatório";
+  color: red;
+  margin-left: 0.5rem;
+}

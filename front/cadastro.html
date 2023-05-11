@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bixo Como A Gente</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="cadastro.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#">Página Inicial</a></li>
+				<li><a href="#">Sobre Nós</a></li>
+				<li><a href="#">Contato</a></li>
+			</ul>
+		</nav>
+		<h1>Bixo Como A Gente</h1>
+	</header>
+	<main>
+	<section class="hero">
+
+	<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="cães.jpg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="cão_gato.jpg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="cato.jpg">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+
+
+</main>
+<div align="center">
+	
+	<section class="form-section">
+		<h2 align="center">Cadastro de Humano e Bichinho</h2>
+		<form action="#" method="POST">
+			<fieldset>
+				<legend align="center">Dados do Humano de Estimação</legend>
+				<label for="nome-humano">Nome completo:</label>
+				<input type="text" id="nome-humano" name="nome-humano" required>
+
+				<label for="idade-humano">Idade:</label>
+				<input type="number" id="idade-humano" name="idade-humano" required>
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+
+				<label for="sexo-humano">Sexo:</label>
+				<select id="sexo-humano" name="sexo-humano" required>
+					<option value="">Selecione</option>
+					<option value="masculino">Masculino</option>
+					<option value="feminino">Feminino</option>
+					<option value="outro">Outro</option>
+				</select>
+			</fieldset>
+
+			<fieldset>
+				<legend align="center">Dados do Bichinho</legend>
+				<label for="nome-bichinho">Nome:</label>
+				<input type="text" id="nome-bichinho" name="nome-bichinho" required>
+
+				<label for="idade-bichinho">Idade:</label>
+				<input type="number" id="idade-bichinho" name="idade-bichinho" required>
+
+				<label for="especie-bichinho">Espécie:</label>
+				<input type="text" id="especie-bichinho" name="especie-bichinho" required>
+
+				<label for="raca-bichinho">Raça:</label>
+				<input type="text" id="raca-bichinho" name="raca-bichinho" required>
+
+				<label for="sexo-bichinho">Sexo:</label>
+				<select id="sexo-bichinho" name="sexo-bichinho" required>
+					<option value="">Selecione</option>
+					<option value="masculino">Masculino</option>
+					<option value="feminino">Feminino</option>
+					<option value="outro">Outro</option>
+				</select>
+
+				<label for="cor-bichinho">Cor:</label>
+				<input type="text" id="cor-bichinho" name="cor-bichinho" required>
+
+				<label for="cor-olhos-bichinho">Cor dos olhos:</label>
+				<input type="text" id="cor-olhos-bichinho" name="cor-olhos-bichinho" required>
+
+				<label for="tamanho-bichinho">Tamanho:</label>
+				<input type="text" id="tamanho-bichinho" name="tamanho-bichinho" required>
+
+				<label for="peso-bichinho">Peso:</label>
+				<input type="number" id="peso-bichinho" name="peso-bichinho" required>
+
+				<label for="cor-preferida-bichinho">Cor preferida:</label>
+				<input type="text" id="cor-preferida-bichinho" name="cor-preferida-bichinho" required>
+
+				<label for="comida-preferida-bichinho">Comida Preferida:</label>
+				<input type="text" id="comida-preferida-bichinho" name="comida-preferida-bichinho">
+			</fieldset>
+		</form>
+	</section>
+</div>
+
+<footer>
+	<p>Copyright © Bixo Como A Gente - Todos os direitos reservados</p>
+</footer>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

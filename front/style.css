@@ -1,8 +1,8 @@
-/* resetando valores padrões do navegador */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: 1px solid red;
 }
 
 /* estilizando a fonte e fundo do body */

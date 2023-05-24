@@ -1,2 +1,2 @@
-# Collab_Absurdo-Time_de_Devs
-Bora montar um time de dev pra apresentar o trabalho
+# Rede_Pets
+Montagem de rede social

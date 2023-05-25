@@ -57,8 +57,26 @@ function openChat(event) {
   var profileName = event.target.textContent;
   var chatWindow = document.createElement('div');
   chatWindow.className = 'chat-window-small';
-  chatWindow.textContent = 'Chat com ' + profileName;
+  var chatTitle = document.createElement('div');
+  chatTitle.className = 'chat-title';
+  chatTitle.textContent = 'Chat com ' + profileName;
+  var chatInput = document.createElement('textarea');
+  chatInput.className = 'chat-input';
+  chatInput.placeholder = 'Digite sua mensagem...';
+  var sendButton = document.createElement('button');
+  sendButton.textContent = 'Enviar';
+  sendButton.addEventListener('click', sendMessage);
+  chatWindow.appendChild(chatTitle);
+  chatWindow.appendChild(chatInput);
+  chatWindow.appendChild(sendButton);
   document.body.appendChild(chatWindow);
+}
+
+function sendMessage(event) {
+  var chatWindow = event.target.closest('.chat-window-small');
+  var chatInput = chatWindow.querySelector('.chat-input');
+  var message = chatInput.value;
+  chatInput.value = '';
 }
 
 

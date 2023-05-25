@@ -5,9 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<style>
-		/* Adicione aqui o CSS para estilizar a página "Linha do Tempo" */
-	</style>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
 	<header>
@@ -22,15 +21,36 @@
 		<h1>Bixo Como A Gente</h1>
 	</header>
 	<main>
-		<section class="hero">
-			<div><h3>Linha do Tempo</h3></div>
-			<!-- Conteúdo da seção hero -->
+		<section class="publicacao">
+			<div>
+				<h3>Linha do Tempo</h3>
+				<textarea placeholder="Oque seu pet tem feito?"></textarea>
+				<button href="">Publicar</button>
+			</div>
+				<div class="chat-window">
+		<div class="chat-header" onclick="toggleChat()">Chat</div>
+		<div class="chat-body">
+			<div class="chat-message">Hello!</div>
+			<div class="chat-message">How can I help you?</div>
+		</div>
+		<div class="chat-footer">
+			<input type="text" class="chat-input" placeholder="Type your message...">
+		</div>
+	</div>
+
+	<script>
+		function toggleChat() {
+			var chatWindow = document.querySelector('.chat-window');
+			chatWindow.classList.toggle('minimized');
+		}
+	</script>
+			
 		</section>
 		<section class="features">
-			<!-- Conteúdo da seção features -->
-		</section>
+			
+			</section>
 		<section class="hero azul">
-			<!-- Conteúdo da seção hero azul -->
+			
 		</section>
 	</main>
 	<footer>

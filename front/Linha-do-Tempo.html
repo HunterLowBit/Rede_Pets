@@ -30,18 +30,18 @@
 				<div class="chat-window">
 		<div class="chat-header" onclick="toggleChat()">Chat</div>
 		<div class="chat-body">
-			<div class="chat-message" onclick="toggleChat()">Perfil1</div>
-			<div class="chat-message" onclick="toggleChat()">Perfil2</div>
-			<div class="chat-message" onclick="toggleChat()">Perfil3</div>
-			<div class="chat-message" onclick="toggleChat()">Perfil4</div>
-			<div class="chat-message" onclick="toggleChat()">Perfil5</div>
-			<div class="chat-message" onclick="toggleChat()">Perfil6</div>
-			<div class="chat-message" onclick="toggleChat()">Perfil7</div>
-			<div class="chat-message" onclick="toggleChat()">Perfil8</div>
-			<div class="chat-message" onclick="toggleChat()">Perfil9</div>
-			<div class="chat-message" onclick="toggleChat()">Perfil10</div>
-			<div class="chat-message" onclick="toggleChat()">Perfil11</div>
-			<div class="chat-message" onclick="toggleChat()">Perfil12</div>
+			<div class="chat-message" onclick="openChat(event)">Perfil1</div>
+			<div class="chat-message" onclick="openChat(event)">Perfil2</div>
+			<div class="chat-message" onclick="openChat(event)">Perfil3</div>
+			<div class="chat-message" onclick="openChat(event)">Perfil4</div>
+			<div class="chat-message" onclick="openChat(event)">Perfil5</div>
+			<div class="chat-message" onclick="openChat(event)">Perfil6</div>
+			<div class="chat-message" onclick="openChat(event)">Perfil7</div>
+			<div class="chat-message" onclick="openChat(event)">Perfil8</div>
+			<div class="chat-message" onclick="openChat(event)">Perfil9</div>
+			<div class="chat-message" onclick="openChat(event)">Perfil10</div>
+			<div class="chat-message" onclick="openChat(event)">Perfil11</div>
+			<div class="chat-message" onclick="openChat(event)">Perfil12</div>
 		</div>
 		<div class="chat-footer">
 			<input type="text" class="chat-input" placeholder="Type your message...">
@@ -53,6 +53,15 @@
 			var chatWindow = document.querySelector('.chat-window');
 			chatWindow.classList.toggle('minimized');
 		}
+function openChat(event) {
+  var profileName = event.target.textContent;
+  var chatWindow = document.createElement('div');
+  chatWindow.className = 'chat-window-small';
+  chatWindow.textContent = 'Chat com ' + profileName;
+  document.body.appendChild(chatWindow);
+}
+
+
 	</script>
 			
 		</section>

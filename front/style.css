@@ -265,12 +265,18 @@ footer {
     }
 
     .publicacao textarea {
-      width: 35%;
-      height: 40px;
+      width: 31%;
+      height: 35px;
       margin: 0 auto;
     }
+     .publicacao button {
+      display: block;
+      margin: 0 auto;
+      width: 31%;
+      height: 37px;
+    }
 
-        .chat-window {
+      .chat-window {
       position: fixed;
       bottom: 20px;
       right: 20px;
@@ -312,3 +318,14 @@ footer {
     .minimized {
       height: 40px !important;
     }
+
+    input::placeholder,
+    textarea::placeholder {
+    color: #999; 
+    font-style: italic;
+    font-size: 19px;
+    font-family: Arial;
+    text-transform:capitalize;
+    text-align: left;
+    cursor: text;
+}

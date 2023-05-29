@@ -367,3 +367,22 @@ footer {
     cursor: pointer;
   }
 
+  .chat-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-close-button {
+  background: none;
+  border: none;
+  font-size: 6px;
+  cursor: pointer;
+  color: #333;
+}
+
+.chat-close-button:hover {
+  color: red;
+}
+
+

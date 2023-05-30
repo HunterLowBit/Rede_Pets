@@ -45,15 +45,11 @@
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
-
-
-
 </main>
 <div align="center">
-	
 	<section class="form-section">
 		<h2 align="center">Cadastro de Humano e Bichinho</h2>
-		<form action="#" method="POST">
+		<form id="cadastro-form" action="cadastro.php" method="POST">
 			<fieldset>
 				<legend align="center">Dados do Humano de Estimação</legend>
 				<label for="nome-humano">Nome completo:</label>
@@ -107,20 +103,22 @@
 
 				<label for="peso-bichinho">Peso:</label>
 				<input type="number" id="peso-bichinho" name="peso-bichinho" required>
+<label for="cor-preferida-bichinho">Cor preferida:</label>
+<input type="text" id="cor-preferida-bichinho" name="cor-preferida-bichinho" required>
 
-				<label for="cor-preferida-bichinho">Cor preferida:</label>
-				<input type="text" id="cor-preferida-bichinho" name="cor-preferida-bichinho" required>
+<label for="comida-preferida-bichinho">Comida Preferida:</label>
+<input type="text" id="comida-preferida-bichinho" name="comida-preferida-bichinho">
 
-				<label for="comida-preferida-bichinho">Comida Preferida:</label>
-				<input type="text" id="comida-preferida-bichinho" name="comida-preferida-bichinho">
-			</fieldset>
-		</form>
-	</section>
+<button type="submit" class="submit-button">Enviar</button>
+</fieldset>
+</form>
+</section>
 </div>
 
 <footer>
 	<p>Copyright © Bixo Como A Gente - Todos os direitos reservados</p>
 </footer>
+<script type="text/javascript" src="cadastro.js"></script>
 <script type="text/javascript" src="index.js"></script>
 </body>
 </html>

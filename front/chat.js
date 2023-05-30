@@ -46,7 +46,7 @@ chatWindow.appendChild(closeButton);
   
 }
 
- //Função que possibilita o chat poder ser minimizado
+aa //Função que possibilita o chat poder ser minimizado
  function toggleChat() {
       var chatWindow = document.querySelector('.chat-window');
       chatWindow.classList.toggle('minimized');

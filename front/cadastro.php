@@ -1,51 +1,55 @@
 <?php
 
+$servername = "";
+$username = "";
+$password = "";
+$dbname = "";
 
-$servername = "nome_do_servidor";
-$username = "nome_de_usuario";
-$password = "senha";
-$dbname = "nome_do_banco_de_dados";
 
-
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password);
 
 
 if ($conn->connect_error) {
     die("Erro na conexão com o banco de dados: " . $conn->connect_error);
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-
-    $nomeHumano = $_POST["nome-humano"];
-    $idadeHumano = $_POST["idade-humano"];
-    $email = $_POST["email"];
-    $sexoHumano = $_POST["sexo-humano"];
-    $nomeBichinho = $_POST["nome-bichinho"];
-    $idadeBichinho = $_POST["idade-bichinho"];
-    $especieBichinho = $_POST["especie-bichinho"];
-    $racaBichinho = $_POST["raca-bichinho"];
-    $sexoBichinho = $_POST["sexo-bichinho"];
-    $corBichinho = $_POST["cor-bichinho"];
-    $corOlhosBichinho = $_POST["cor-olhos-bichinho"];
-    $tamanhoBichinho = $_POST["tamanho-bichinho"];
-    $pesoBichinho = $_POST["peso-bichinho"];
-    $corPreferidaBichinho = $_POST["cor-preferida-bichinho"];
-    $comidaPreferidaBichinho = $_POST["comida-preferida-bichinho"];
-
-
-    $sql = "INSERT INTO nome_da_tabela (nome_humano, idade_humano, email, sexo_humano, nome_bichinho, idade_bichinho, especie_bichinho, raca_bichinho, sexo_bichinho, cor_bichinho, cor_olhos_bichinho, tamanho_bichinho, peso_bichinho, cor_preferida_bichinho, comida_preferida_bichinho) 
-            VALUES ('$nomeHumano', $idadeHumano, '$email', '$sexoHumano', '$nomeBichinho', $idadeBichinho, '$especieBichinho', '$racaBichinho', '$sexoBichinho', '$corBichinho', '$corOlhosBichinho', '$tamanhoBichinho', $pesoBichinho, '$corPreferidaBichinho', '$comidaPreferidaBichinho')";
-
-
-    if ($conn->query($sql) === TRUE) {
-        echo "Dados inseridos com sucesso!";
-    } else {
-        echo "Erro ao inserir os dados: " . $conn->error;
-    }
-
-
-    $conn->close();
+$sql = "CREATE DATABASE IF NOT EXISTS $dbname";
+if ($conn->query($sql) === TRUE) {
+    echo "Banco de dados criado com sucesso!";
+} else {
+    echo "Erro ao criar o banco de dados: " . $conn->error;
 }
+
+
+$conn->select_db($dbname);
+
+
+$sql = "CREATE TABLE IF NOT EXISTS contas_usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome_humano VARCHAR(50),
+    idade_humano INT,
+    email VARCHAR(50),
+    sexo_humano VARCHAR(10),
+    nome_bichinho VARCHAR(50),
+    idade_bichinho INT,
+    especie_bichinho VARCHAR(50),
+    raca_bichinho VARCHAR(50),
+    sexo_bichinho VARCHAR(10),
+    cor_bichinho VARCHAR(20),
+    cor_olhos_bichinho VARCHAR(20),
+    tamanho_bichinho VARCHAR(20),
+    peso_bichinho FLOAT,
+    cor_preferida_bichinho VARCHAR(20),
+    comida_preferida_bichinho VARCHAR(50)
+)";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Tabela criada com sucesso!";
+} else {
+    echo "Erro ao criar a tabela: " . $conn->error;
+}
+
+$conn->close();
 
 ?>

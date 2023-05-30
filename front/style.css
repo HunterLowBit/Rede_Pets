@@ -249,6 +249,16 @@ footer {
       border-radius: 5px;
       cursor: pointer;
     }
+    /*Botão de email estourado, favor mecher aqui*/
+    .email-button {
+      width: 100px;
+      height: 40px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
     .login-button:hover {
       background-color: #45a049;

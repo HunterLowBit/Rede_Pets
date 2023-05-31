@@ -1,8 +1,9 @@
+const express = require("express");
 const { MongoClient, ServerApiVersion } = require("mongodb");
+
 const uri =
   "mongodb+srv://hlb_dev:<hlbdev2k>@cluster0.m3kphon.mongodb.net/?retryWrites=true&w=majority";
 
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -11,18 +12,33 @@ const client = new MongoClient(uri, {
   },
 });
 
-async function run() {
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Hello, World!");
+});
+
+app.get("/connect", async (req, res) => {
   try {
-    // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
-    // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
+    res.send("Connected to MongoDB");
+  } catch (error) {
+    console.error("Error connecting to MongoDB", error);
+    res.status(500).send("Error connecting to MongoDB");
   } finally {
-    // Ensures that the client will close when you finish/error
     await client.close();
   }
-}
-run().catch(console.dir);
+});
+
+app.use((req, res, next) => {
+  res.status(404).send("Page not found");
+});
+
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}\n http://localhost:3000`);
+});
